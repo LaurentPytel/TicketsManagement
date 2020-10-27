@@ -27,11 +27,20 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="ApplicationFlask\auth.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="TMServer.py" />
-    <Compile Include="ApplicationFlask\views.py" />
+    <Compile Include="ApplicationFlask\Routes.py" />
     <Compile Include="ApplicationFlask\__init__.py" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ApplicationFlask\static\css\style.css" />
+    <Content Include="ApplicationFlask\Templates\base.html" />
+    <Content Include="ApplicationFlask\Templates\index.html" />
+    <Content Include="ApplicationFlask\Templates\login.html" />
+    <Content Include="ApplicationFlask\Templates\signup.html" />
+    <Content Include="ApplicationFlask\Templates\home.html" />
     <Content Include="requirements.txt" />
   </ItemGroup>
   <ItemGroup>
@@ -47,6 +56,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ApplicationFlask\" />
+    <Folder Include="ApplicationFlask\static\" />
+    <Folder Include="ApplicationFlask\static\css\" />
+    <Folder Include="ApplicationFlask\static\js\" />
     <Folder Include="ApplicationFlask\Templates\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Web.targets" />
